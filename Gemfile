@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Using faker for creating testing book data
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'simple_form'
+gem 'bootstrap', '~> 4.2.1'
+
