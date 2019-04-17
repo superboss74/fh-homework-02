@@ -5,10 +5,15 @@
     <div class="col-xs-12 col-sm-8 offset-sm-2">
       <h1>Book Catalog</h1>
 
-      <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-        <%= f.input :title, input_html: {value: ""} %>   
-        <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= form_tag("/", method: "get") do %>
+        <%= label_tag(:keyword, "Search for:") %>
+        <%= text_field_tag(:keyword) %>
+        <%= submit_tag("Search") %>
       <% end %>
+      <%#= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+        <%#= f.input :keyword, input_html: {value: ""} %>   
+        <%#= f.submit "Search", class: "btn btn-primary" %>
+      <%# end %>
 
       <table>
         <thead>
